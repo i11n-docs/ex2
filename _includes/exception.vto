@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: main.vto
 ---
 
 <h1>{{ title }}</h1>
@@ -44,7 +44,7 @@ layout: page.njk
   <li>Exception code: 0x{{ ex_code.toString(16) }} ({{ ex_code }})</li>
 
   {{ if exc_parent_name }}
-    <li>Parent exception: <a href="/0x{{ exc_parent_code.toString(16) }}">{{ exc_parent_name }}</a></li>
+    <li>Parent exception: <a href="../0x{{ exc_parent_code.toString(16) }}">{{ exc_parent_name }}</a></li>
   {{ /if }}
 
 </ul>

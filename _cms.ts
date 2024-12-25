@@ -1,10 +1,9 @@
-import lumeCMS from "lume/cms/mod.ts";
 
-const cms = lumeCMS();
+import cms from "wiki/_cms.ts";
 
 cms.collection({
   name: 'pages: Exception pages',
-  store: 'src:ex/**/*.md',
+  store: 'src:exceptions/**/*.md',
   fields: [
     {
       name: 'title',
