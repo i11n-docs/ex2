@@ -2,7 +2,7 @@
 import cms from "wiki/_cms.ts";
 
 cms.collection({
-  name: 'pages: Exception pages',
+  name: 'exceptions: Exception pages',
   store: 'src:exceptions/**/*.md',
   fields: [
     {
