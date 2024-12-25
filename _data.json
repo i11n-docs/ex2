@@ -1,0 +1,19 @@
+{
+  "lang": "en",
+  "layout": "page.njk",
+  "metas": {
+    "title": "=title",
+    "site": "ex2",
+    "lang": "en",
+    "description": "=description"
+  },
+  "top_links": [
+    {
+      "icon": "fa fa-house",
+      "title": "Docs home",
+      "url": "https://docs.i11n.io"
+    }
+  ],
+  "nav_links": [
+  ]
+}

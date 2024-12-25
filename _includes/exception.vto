@@ -1,0 +1,54 @@
+---
+layout: page.njk
+---
+
+<h1>{{ title }}</h1>
+
+<h2>Overview</h2>
+
+{{ content }}
+
+<h2>Resolutions</h2>
+
+{{ if resolutions.length == 0 }}
+  <p>No resolutions have been defined for this exception.</p>
+{{ /if }}
+
+{{ for resolution of resolutions }}
+
+  <details name="resolution-details" id="resolution-{{ resolution.id }}">
+    <summary>{{ resolution.title }}</summary>
+    
+    {{ resolution.description |> md }}
+  
+    {{ resolution.content |> md }}
+  
+  </details>
+{{ /for }}
+
+<hr />
+
+<details>
+<summary>Developer notes</summary>
+{{ if impl_notes }}
+
+  <h2>Implementation</h2>
+
+{{ impl_notes |> md }}
+
+{{ /if }}
+
+<h3>Meta</h3>
+
+<ul>
+  <li>Exception code: 0x{{ ex_code.toString(16) }} ({{ ex_code }})</li>
+
+  {{ if exc_parent_name }}
+    <li>Parent exception: <a href="./0x{{ exc_parent_code.toString(16) }}">{{ exc_parent_name }}</a></li>
+  {{ /if }}
+
+</ul>
+
+</details>
+
+

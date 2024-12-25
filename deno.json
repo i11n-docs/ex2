@@ -1,0 +1,19 @@
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.4.3/",
+    "lumocs/": "https://deno.land/x/lumocs@0.1.3/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.6.3/"
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "build": "deno task lume",
+    "build:prod": "deno task lume --location=https://docs.i11n.io/ex2/ex/",
+    "serve": "deno task lume -s",
+    "cms": "deno task lume cms"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
+  }
+}
