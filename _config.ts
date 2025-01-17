@@ -13,7 +13,6 @@ site.use(prism({
   }
 }));
 
-
 site.copy('/static')
 site.use(wiki({
   favicon: {
