@@ -13,7 +13,12 @@ site.use(prism({
   }
 }));
 
+
 site.copy('/static')
-site.use(wiki());
+site.use(wiki({
+  favicon: {
+    input: '/favicon.png'
+  }
+}));
 
 export default site;
