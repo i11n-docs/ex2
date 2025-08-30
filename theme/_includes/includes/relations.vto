@@ -1,0 +1,5 @@
+{{ if child }}
+  {{ include "includes/relation.vto" { relation: child, label: "Exceptions" } }}
+{{ else }}
+  <li class="menu-title text-info"><small>No related content</small></li>
+{{ /if }}
