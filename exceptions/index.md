@@ -1,4 +1,6 @@
 ---
 title: Exceptions
+layout: layouts/index.vto
 ---
-Exceptions
+
+## Just a list of exceptions
