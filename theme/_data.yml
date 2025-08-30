@@ -1,0 +1,13 @@
+lang: en
+bugurl: https://github.com/i11n-docs/ex2/issues?template=bug_report.md
+
+logo: /uploads/logo.png
+name:
+  start: ex
+  end: 2
+
+metas:
+  site: ex2
+  icon: /uploads/favicon.png
+  lang: =lang
+  generator: true

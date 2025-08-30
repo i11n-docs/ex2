@@ -1,0 +1,21 @@
+
+{{ set current = parts.shift() }}
+{{ for page of pages }}
+  <li>
+  {{# TODO Change icon partial to component #}}
+    {{if !page.children }}
+      <a href="{{ page.data.url }}"{{if page.data.url === url}} aria-current{{ /if }}>
+        {{ page.data.title }}
+      </a>
+    {{ else }}
+      <details{{if current === page.data.basename }} open{{/if}}>
+        <summary{{if page.data.url === url}} aria-current{{ /if }}>
+          <a href="{{ page.data.url }}">
+          {{ page.data.title }}</a></summary>
+        <ul>
+          {{ include "includes/sidebar.vto" { pages: page.children, parts: parts } }}
+        </ul>
+      </details>
+    {{ /if }}
+  </li>
+{{ /for }}
